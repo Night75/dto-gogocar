@@ -1,0 +1,12 @@
+{
+    "name": "gogocar/dto",
+    "license": "proprietary",
+    "type": "project",
+    "description": "Gogocar DTO",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.5"
+    }
+}
