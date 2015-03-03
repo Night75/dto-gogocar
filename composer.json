@@ -4,7 +4,7 @@
     "type": "project",
     "description": "Gogocar DTO",
     "autoload": {
-        "psr-0": { "GogoCar\\Dto": "" }
+        "psr-0": { "Gogocar\\Dto": "" }
     },
     "require": {
         "php": ">=5.5",
