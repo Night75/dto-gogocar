@@ -4,9 +4,10 @@
     "type": "project",
     "description": "Gogocar DTO",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "GogoCar\\Dto": "" }
     },
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "friendsofsymfony/user-bundle": "~1.3.5"
     }
 }
