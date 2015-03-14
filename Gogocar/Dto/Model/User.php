@@ -5,7 +5,7 @@ namespace Gogocar\Dto\Model;
 use FOS\UserBundle\Model\User as BaseUser;
 use JMS\Serializer\Annotation as Serializer;
 
-class User
+class User extends BaseUser
 {
     protected $id;
 
@@ -111,4 +111,15 @@ class User
      * @var \DateTime
      */
     protected $credentialsExpireAt;
+
+    /**
+     * @param $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 }

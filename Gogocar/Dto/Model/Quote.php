@@ -4,7 +4,7 @@ namespace Gogocar\Dto\Model;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class Quote
+class Quote extends BaseModel
 {
     /**
      * @Serializer\Expose()
