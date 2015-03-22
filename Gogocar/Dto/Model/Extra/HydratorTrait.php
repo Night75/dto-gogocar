@@ -1,6 +1,6 @@
 <?php
 
-namespace Gogocar\Dto\Model\Util;
+namespace Gogocar\Dto\Model\Extra;
 
 trait HydratorTrait
 {

@@ -6,7 +6,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Quote extends BaseModel
 {
-    use Decorator\TimestampableTrait;
+    use Extra\TimestampableTrait;
 
     /**
      * @Serializer\Expose()

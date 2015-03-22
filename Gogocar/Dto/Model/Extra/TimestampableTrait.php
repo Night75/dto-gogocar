@@ -1,6 +1,6 @@
 <?php
 
-namespace Gogocar\Dto\Model\Decorator;
+namespace Gogocar\Dto\Model\Extra;
 
 use JMS\Serializer\Annotation as Serializer;
 
