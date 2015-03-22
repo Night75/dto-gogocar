@@ -6,18 +6,34 @@ class ApiException extends \Exception
 {
     protected $code;
     protected $message;
-    protected $extra = [];
+    protected $description = '';
+    protected $extra       = [];
 
-    public function __construct($code = null, $message = '', $description = '', array $extra = [])
+    public function __construct()
     {
-        $this->code        = $code ? $code : 500;
-        $this->message     = $message ? $message : 'Error';
-        $this->description = $description ? $description : 'Error';
-        $this->extra       = $extra;
+        // Hack to force to define properties values for children classes
+        $this->validateNonEmptyProp('code');
+        $this->validateNonEmptyProp('message');
     }
 
     public function getExtra()
     {
         return $this->extra;
+    }
+
+    /**
+     *
+     * @param string $prop
+     * @throws \Exception
+     */
+    protected function validateNonEmptyProp($prop)
+    {
+        if (empty($this->$prop)) {
+            throw new \Exception(sprintf(
+                'You must define a value for the "%s::%s" property',
+                static::class,
+                $prop
+            ));
+        }
     }
 }

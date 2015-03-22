@@ -10,5 +10,6 @@ class InvalidFormException extends ApiException
     public function __construct($extra)
     {
         $this->extra['errors'] = $extra;
+        parent::__construct();
     }
 }

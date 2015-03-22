@@ -6,6 +6,8 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Quote extends BaseModel
 {
+    use Decorator\TimestampableTrait;
+
     /**
      * @Serializer\Expose()
      */
@@ -60,6 +62,7 @@ class Quote extends BaseModel
     public function setDetails($details)
     {
         $this->details = $details;
+
         return $this;
     }
 
